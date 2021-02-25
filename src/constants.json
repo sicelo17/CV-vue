@@ -1,0 +1,89 @@
+{
+  "serviceData": [
+    {
+      "name": "Web Development",
+      "desc": "Services that I offer and are very passionate about",
+      "icon": "bx bx-laptop services_icon"
+    },
+    {
+      "name": "UI/UX Design",
+      "desc": "Services that I offer and are very passionate about",
+      "icon": "bx bx-palette services_icon"
+    }
+  ],
+
+  "portfolio": [
+    {
+      "content": "portfolio_content mix",
+      "class": "web",
+      "img": "https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "name": "Web Development",
+      "title": "New Portfolio of work done",
+      "link": "View Details"
+    },
+    {
+      "content": "portfolio_content mix",
+      "class": "web",
+      "img": "./assets/img/prog.jpg",
+      "name": "Web Development",
+      "title": "New Portfolio of work done",
+      "link": "View Details"
+    },
+    {
+      "content": "portfolio_content mix",
+      "class": "ux",
+      "img": "./assets/img/phone.jpg",
+      "name": "UI/UX Design",
+      "title": "New Portfolio of work done",
+      "link": "View Details"
+    }
+  ],
+  
+  "qualification": [
+    {
+      "title": "Work Experience",
+      "area": "Web Developer",
+      "icon": "bx bx-briefcase-alt qualification-icon",
+      "icon2": "bx bx-briefcase-alt qualification-icon",
+      "place": "Cranelad",
+      "work": "bx bx-calendar-alt qualification-icon",
+      "duration": "Sept 2020 - Current"
+    },
+    {
+      "title": "Education",
+      "area": "BSc(Hon) Computer Science",
+      "icon2": "bx bx-briefcase-alt qualification-icon",
+      "icon": "bx bx-book-bookmark qualification-icon",
+      "place": "National University of Science and Technology",
+      "work": "bx bx-calendar-alt qualification-icon",
+      "duration": "Mar 2019 - Current"
+    }
+  ],
+
+  "home": [
+    {
+      "icon": "bx bxl-twitter"
+    },
+    {
+      "icon": "bx bxl-instagram"
+    },
+    {
+      "icon": "bx bxl-linkedin-square'"
+    },
+    {
+      "icon": "bx bxl-github"
+    }
+  ],
+
+  "contact": [
+    {
+      "icon": "bx bxl-whatsapp contact_icon"
+    },
+    {
+      "icon": "bx bxl-telegram contact_icon"
+    },
+    {
+      "icon": "bx bxl-messenger contact_icon"
+    }
+  ]
+}
