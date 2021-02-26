@@ -6,8 +6,8 @@
             <div class="nav_menu" id="nav-menu">
                 <ul class="nav_list">
                     <router-link class="nav_item" to="/">Home</router-link>
-                    <li class="nav_item"><a href="#about" class="nav_link">About</a></li>
-                    <li class="nav_item"><a href="#services" class="nav_link">Services</a></li>
+                    <router-link class="nav_item" to="/">About</router-link>
+                    <router-link class="nav_item" to="/">Services</router-link>
                     <router-link class="nav_item" to="/portfolio">Portfolio</router-link>
                     <router-link class="nav_item" to="/contact">Contact</router-link>
                 </ul>
