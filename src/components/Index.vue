@@ -8,8 +8,8 @@
                     <a download="" href="assets/pdf/Sicelo Sitsha resume.pdf" class="button button-light">Download CV</a>
                 </div>
 
-                <div class="home_social" id="home-social" :key="icon" v-for="icon in icons">
-                      <a href="#" class="home_social-icon"><i class="{{icon}}"></i></a>
+                <div class="home_social" id="home-social" :key="item" v-for="item in home">
+                      <a href="#" class="home_social-icon"><i class="{{item.icon}}"></i></a>
                 </div>
 
                 <div class="home_img">
@@ -22,7 +22,19 @@
 
 <script>
 export default {
-    name: "Index"
+    name: "Index",
+    data(){
+        return {
+            home: [],
+        }
+    },
+    mounted() {
+        fetch('http://localhost:3000/home')
+            .then(res => res.json())
+            .then(data => this.home = data)
+            .catch(err => console.log(err))
+            
+    }
 }
 </script>
 
