@@ -9,7 +9,7 @@
                     <li class="nav_item"><a href="#about" class="nav_link">About</a></li>
                     <li class="nav_item"><a href="#services" class="nav_link">Services</a></li>
                     <router-link class="nav_item" to="/portfolio">Portfolio</router-link>
-                    <li class="nav_item"><a href="#contact" class="nav_link">Contact</a></li>
+                    <router-link class="nav_item" to="/contact">Contact</router-link>
                 </ul>
             </div>
 
@@ -29,7 +29,7 @@ export default {
 <style scoped>
 
 .nav {
-    height: var(--header-height);
+    height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,14 +37,15 @@ export default {
 
 .nav_item {
     margin-bottom: var(--mb-3);
+    padding-top: var(--mb-2);
 }
 
-.nav_link {
+.nav_link,.nav_item:visited {
     color: var(--first-color-lighten);
     transition: .3s;
 }
 
-.nav_link:hover {
+.nav_link:hover, .nav_item:visited:hover {
     color: var(--first-color-light);
 }
 

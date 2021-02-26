@@ -20,6 +20,56 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.portfolio_nav {
+    text-align: center;
+    margin-bottom: var(--mb-3);
+    font-weight: lighter;
+}
 
+.portfolio_item {
+    margin: 0 var(--mb-2);
+    cursor: pointer;
+}
+
+.portfolio_content {
+    background-color: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(174, 190, 205, .3);
+}
+
+.portfolio_img {
+    width: 100%;
+    transition: .4s;
+}
+
+.portfolio_data {
+    padding: 1.5rem;
+}
+
+.portfolio_subtitle {
+    font-size: var(--small-font-size);
+    color: var(--first-color-light);
+}
+
+.portfolio_title {
+    font-size: var(--h3-font-size);
+    color: var(--first-color);
+    margin: var(--mb-2) 0;
+}
+
+.portfolio_content:hover {
+    box-shadow: rgba(174, 190, 205, .4) ;
+}
+
+.portfolio_content:hover, .portfolio_img{
+    transform: scale(1.02);
+}
+
+/* Active menu portfolio */
+.active-portfolio {
+    color: var(--first-color-dark);
+    font-weight: var(--font-bold);
+}
 </style>
