@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .nav {
     height: var(--header-height);
     display: flex;
@@ -55,5 +55,18 @@ export default {
     font-size: 1.3rem;
     cursor: pointer;
 }
-
+@media screen and (max-width: 768px){
+    .nav_menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding-top: 1.5rem;
+        text-align: center;
+        background-color: #000;
+        transition: .4s;
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        border-radius: 0 0 1rem 1rem;
+    }
+}
 </style>
