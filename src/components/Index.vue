@@ -8,7 +8,7 @@
                     <a download="" href="assets/pdf/Sicelo Sitsha resume.pdf" class="button button-light">Download CV</a>
                 </div>
 
-                <div class="home_social" id="home-social" :key="item" v-for="item in home">
+                <div class="home_social" id="home-social" :key="item" v-for="item in index">
                       <a href="#" class="home_social-icon"><i class="{{item.icon}}"></i></a>
                 </div>
 
@@ -25,13 +25,13 @@ export default {
     name: "Index",
     data(){
         return {
-            home: [],
+            index: [],
         }
     },
     mounted() {
-        fetch('http://localhost:3000/home')
+        fetch('http://localhost:3000/index')
             .then(res => res.json())
-            .then(data => this.home = data)
+            .then(data => this.index = data)
             .catch(err => console.log(err))
             
     }

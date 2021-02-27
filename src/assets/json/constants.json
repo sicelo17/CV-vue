@@ -14,7 +14,7 @@
 
   "portfolio": [
     {
-      "content": "portfolio_content mix",
+      "content": "",
       "class": "web",
       "img": "https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       "name": "Web Development",
@@ -24,7 +24,7 @@
     {
       "content": "portfolio_content mix",
       "class": "web",
-      "img": "./assets/img/prog.jpg",
+      "img": "../img/prog.jpg",
       "name": "Web Development",
       "title": "New Portfolio of work done",
       "link": "View Details"
@@ -32,7 +32,7 @@
     {
       "content": "portfolio_content mix",
       "class": "ux",
-      "img": "./assets/img/phone.jpg",
+      "img": "../img/phone.jpg",
       "name": "UI/UX Design",
       "title": "New Portfolio of work done",
       "link": "View Details"
@@ -60,7 +60,7 @@
     }
   ],
 
-  "home": [
+  "index": [
     {
       "icon": "bx bxl-twitter"
     },
@@ -75,7 +75,7 @@
     }
   ],
 
-  "contact": [
+  "contacts": [
     {
       "icon": "bx bxl-whatsapp contact_icon"
     },

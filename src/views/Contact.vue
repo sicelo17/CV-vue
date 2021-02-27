@@ -26,8 +26,8 @@
                     <div class="contact_box">
                         <i class="bx bx-home contact_icon"></i>
                         <h3 class="contact_title">Chat</h3>
-                        <div id="contact-info">
-                            
+                        <div id="contact-info" :key="contact" v-for="contact in contacts">
+                            <a href="#" class="contact_social"><i class="{{contact.icon}}"></i></a>
                         </div>
                     </div>
                 </div>
@@ -53,6 +53,19 @@
 <script>
 export default {
 
+    data(){
+        return{
+            contacts:[]
+        }
+    },
+ mounted() {
+     
+        fetch('http://localhost:3000/contacts')
+            .then(res => res.json())
+            .then(data => this.contacts = data)
+            .catch(err => console.log(err))
+            
+    }
 }
 </script>
 

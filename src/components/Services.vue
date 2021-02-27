@@ -4,9 +4,9 @@
             <h2 class="section-title">Services</h2>
 
             <div class="services_container bd-grid" id="serv">
-              <div class="services_data" v-for="service in myJson" :key="service">
-                        <i class="${service.icon}"></i>
-                        <h3 class="services_title">${service.name}</h3>
+              <div class="services_data" v-for="service in services" :key="service">
+                        <i class="{{service.icon}}"></i>
+                        <h3 class="services_title">{{service.name}}</h3>
                         <p class="services_description">Services that I offer and are very passionate about</p>
                         <a href="#" class="button">Know More</a>
               </div>
@@ -16,7 +16,18 @@
 
 <script>
 export default {
-
+    data(){
+        return{
+            services: []
+        }
+    },
+    mounted() {
+         fetch('http://localhost:3000/serviceData')
+            .then(res => res.json())
+            .then(data => this.services = data)
+            .catch(err => console.log(err))
+            
+    }
 }
 </script>
 

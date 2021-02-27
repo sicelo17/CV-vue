@@ -9,14 +9,35 @@
                 <span class="portfolio_item" data-filter=".ux">UI/UX</span>
             </div>
 
-            <div class="portfolio_container bd-grid"  id="portfolio-content">
-                
+            <div class="portfolio_container bd-grid"  id="portfolio-content" :key="port" v-for="port in portfolio">
+                 <div class="portfolio_content mix {{port.class}}">
+                    <a href="#"><img src="{{port.img}}" alt="" class="portfolio_img"></a>
+                      <div class="portfolio_data">
+                          <span class="portfolio_subtitle">{{port.name}}</span>
+                          <a href="#"><h2 class="portfolio_title">{{port.title}}</h2></a>
+                          <a href="#" class="button button-link">{{port.link}}</a>
+                      </div>
+                </div>
             </div>
         </section>
 </template>
 
 <script>
 export default {
+
+    data(){
+        return{
+            portfolio:[]
+        }
+    },
+ mounted() {
+     
+        fetch('http://localhost:3000/portfolio')
+            .then(res => res.json())
+            .then(data => this.portfolio = data)
+            .catch(err => console.log(err))
+            
+    }
 }
 </script>
 
