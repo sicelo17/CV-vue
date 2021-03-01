@@ -9,7 +9,6 @@
 
 ## Challenges
 - I am having difficulties in displaying icons from my json file
-- The grid system on some of the elements is not aligning properly
 - images are not appearing from the json file
 - I am not sure how to call the methods in my vue project
 
@@ -21,4 +20,3 @@
 ## Currently Working on
 - finding a way to call the methods defined 
 - making the images and icons display from the json file
-- Fixing the grid layout 
