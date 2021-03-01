@@ -4,8 +4,8 @@
             <span class="section-subtitle">Experience and Education</span>
             <h2 class="section-title">Qualification</h2>
 
-            <div class="qualification_container bd-grid" id="qualification-area" :key="qualification" v-for="qualification in qualifications">
-              <div class="qualification_content">
+            <div class="qualification_container bd-grid" id="qualification-area" >
+              <div class="qualification_content" :key="qualification" v-for="qualification in qualifications">
                     <h2 class="qualification-title">
                         <i class="{{qualification.icon2}}"></i>
                         {{qualification.title}}
@@ -27,6 +27,7 @@
                     </div>
                 </div>
             </div>
+            
         </section>
 
 </template>

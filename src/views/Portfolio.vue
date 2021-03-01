@@ -9,8 +9,8 @@
                 <span class="portfolio_item" data-filter=".ux">UI/UX</span>
             </div>
 
-            <div class="portfolio_container bd-grid"  id="portfolio-content" :key="port" v-for="port in portfolio">
-                 <div class="portfolio_content mix {{port.class}}">
+            <div class="portfolio_container bd-grid"  id="portfolio-content" >
+                 <div class="portfolio_content mix {{port.class}}" :key="port" v-for="port in portfolio">
                     <a href="#"><img src="{{port.img}}" alt="" class="portfolio_img"></a>
                       <div class="portfolio_data">
                           <span class="portfolio_subtitle">{{port.name}}</span>
