@@ -4,23 +4,23 @@
             <span class="section-subtitle">Experience and Education</span>
             <h2 class="section-title">Qualification</h2>
 
-            <div class="qualification_container bd-grid" id="qualification-area" :key="qualification" v-for="qualification in myJson">
+            <div class="qualification_container bd-grid" id="qualification-area" :key="qualification" v-for="qualification in qualifications">
               <div class="qualification_content">
                     <h2 class="qualification-title">
-                        <i class="${qualification.icon2}"></i>
-                        ${qualification.title}
+                        <i class="{{qualification.icon2}}"></i>
+                        {{qualification.title}}
                     </h2>
                     <div class="bd-grid">
                         <div class="qualification_data">
-                            <h3 class="qualification_area">${qualification.area}</h3>
+                            <h3 class="qualification_area">{{qualification.area}}</h3>
                             <div class="qualification_box">
                                 <span class="qualification_work">
-                                    <i class="${qualification.icon}"></i>
-                                    ${qualification.place}
+                                    <i class="{{qualification.icon}}"></i>
+                                    {{qualification.place}}
                                 </span>
                                 <span class="qualification_work">
-                                    <i class="${qualification.work}"></i>
-                                    ${qualification.duration}
+                                    <i class="{{qualification.work}}"></i>
+                                    {{qualification.duration}}
                                 </span>
                             </div>
                         </div>
@@ -33,7 +33,19 @@
 
 <script>
 export default {
-    name: "Qualification"
+    name: "Qualification",
+    data(){
+        return{
+            qualifications: []
+        }
+    },
+    mounted(){
+         fetch('http://localhost:3000/qualification')
+            .then(res => res.json())
+            .then(data => this.qualifications = data)
+            .catch(err => console.log(err))
+            
+    }
 }
 </script>
 

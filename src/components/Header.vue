@@ -23,7 +23,32 @@
 <script>
 export default {
     methods: {
+        // show the mobile menu
+        showMenu (toggleId, navId){
+            const toggle = document.getElementById(toggleId),
+            nav = document.getElementById(navId);
         
+            if (toggle && nav) {
+                toggle.addEventListener('click', () => {
+                nav.classList.toggle('show-menu')
+            });
+            }
+        },
+        // ==== REMOVE MENU MOBILE ==== 
+        linkAction (){
+            const navLink = document.querySelectorAll('.nav_link');
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.remove('show-menu');
+        },
+        // Changing the color of the navbar on scroll
+        scrollHeader(){
+            const header = document.getElementById('header');
+            if (this.scrollY >= 600) header.classList.add('scroll-header'); else header.classList.remove('scroll-header');
+        },
+        scrollTop = () => {
+            const scrollTop = document.getElementById('scroll-top');
+            if (this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll');
+        }
     }
 }
 </script>
@@ -59,6 +84,11 @@ export default {
     font-size: 1.3rem;
     cursor: pointer;
 }
+/* SHOW MENU */
+.show-menu {
+    top: var(--header-height);
+}
+
 @media screen and (max-width: 768px){
     .nav_menu {
         position: fixed;
