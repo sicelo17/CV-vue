@@ -51,7 +51,8 @@ export default {
 
 .footer_link {
     font-size: 1.6rem;
-    background: var(--first-color-lighten);
+    color: var(--first-color-lighten);
+    
     margin: 0 var(--mb-1);
     transition: .3s;
 }
