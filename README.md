@@ -1,24 +1,15 @@
-# cv-vue3
+## Project Setup
+- Download npm from their official website "https://nodejs.org/en/"
+- Install vue 3 by running "npm install -g @vue/cli"
+- Install dependencies namely "vue-router" using the vue UI
+- Install json-server to read json files using the command "npm i json-server"
+- Run the json-server by using the command "npx json-server --watch src/assets/json/constants.json"
+- Run "npm run serve" to see the project live on a localhost
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Challenges
+- I am having difficulties in displaying icons from my json file
+- The grid system on some of the elements is not aligning properly
+- images are not appearing from the json file
+- I am not sure how to call the methods in my vue project
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
