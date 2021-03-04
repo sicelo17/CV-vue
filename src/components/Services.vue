@@ -5,7 +5,7 @@
 
             <div class="services_container bd-grid" id="serv">
               <div class="services_data" v-for="service in services" :key="service">
-                        <i class="{{service.icon}}"></i>
+                        <i :class="service.icon"></i>
                         <h3 class="services_title">{{service.name}}</h3>
                         <p class="services_description">Services that I offer and are very passionate about</p>
                         <a href="#" class="button">Know More</a>
@@ -15,19 +15,18 @@
 </template>
 
 <script>
+
+import constants from "../../src/assets/json/constants.json";
 export default {
     data(){
         return{
-            services: []
+            services: constants.serviceData
         }
     },
-    mounted() {
-         fetch('http://localhost:3000/serviceData')
-            .then(res => res.json())
-            .then(data => this.services = data)
-            .catch(err => console.log(err))
-            
+    created(){
+        console.log(this.services)
     }
+       
 }
 </script>
 

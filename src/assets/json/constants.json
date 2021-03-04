@@ -24,7 +24,7 @@
     {
       "content": "portfolio_content mix",
       "class": "web",
-      "img": "img/prog.jpg",
+      "img": "https://media.gettyimages.com/photos/in-this-photo-illustration-the-guardian-facebook-page-is-seen-blank-picture-id1302716361?k=6&m=1302716361&s=612x612&w=0&h=iLPw7ZwY-EoZhhmsNM-Hpg4F_5B0VIS7hBUu4-e-2Jc=",
       "name": "Web Development",
       "title": "New Portfolio of work done",
       "link": "View Details"
@@ -32,7 +32,7 @@
     {
       "content": "portfolio_content mix",
       "class": "ux",
-      "img": "img/phone.jpg",
+      "img": "https://media.gettyimages.com/vectors/group-of-businessmen-working-in-business-space-statistical-analysis-vector-id1212675428?k=6&m=1212675428&s=612x612&w=0&h=Mv2qOOtn_LsP6H5hYf2n15i0QpyXDPJnPlHeFH7asbI=",
       "name": "UI/UX Design",
       "title": "New Portfolio of work done",
       "link": "View Details"

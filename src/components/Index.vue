@@ -121,8 +121,7 @@ export default {
     }
 
     .home_social {
-        flex-direction: row;
-        align-items: center;
+        display: inline-block;
     }
 
     .home_social-icon {

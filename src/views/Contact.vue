@@ -1,7 +1,7 @@
 <template>
   <section class="contact section bd-container" id="contact">
-            <span class="section-subtitle">Get in Touch</span>
-            <h2 class="section-title">Contact Me</h2>
+        <span class="section-subtitle">Get in Touch</span>
+        <h2 class="section-title">Contact Me</h2>
 
             <div class="contact_container bd-grid">
                 <div class="contact_content bd-grid">
@@ -128,5 +128,8 @@ export default {
 .contact_button {
     cursor: pointer;
     border: none;
+}
+.contact_social {
+    display: inline-flex;
 }
 </style>
