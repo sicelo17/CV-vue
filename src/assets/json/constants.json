@@ -24,7 +24,7 @@
     {
       "content": "portfolio_content mix",
       "class": "web",
-      "img": "../img/prog.jpg",
+      "img": "img/prog.jpg",
       "name": "Web Development",
       "title": "New Portfolio of work done",
       "link": "View Details"
@@ -32,7 +32,7 @@
     {
       "content": "portfolio_content mix",
       "class": "ux",
-      "img": "../img/phone.jpg",
+      "img": "img/phone.jpg",
       "name": "UI/UX Design",
       "title": "New Portfolio of work done",
       "link": "View Details"
@@ -68,7 +68,7 @@
       "icon": "bx bxl-instagram"
     },
     {
-      "icon": "bx bxl-linkedin-square'"
+      "icon": "bx bxl-linkedin'"
     },
     {
       "icon": "bx bxl-github"

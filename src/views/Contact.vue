@@ -27,7 +27,7 @@
                         <i class="bx bx-home contact_icon"></i>
                         <h3 class="contact_title">Chat</h3>
                         <div id="contact-info" :key="contact" v-for="contact in contacts">
-                            <a href="#" class="contact_social"><i class="{{contact.icon}}"></i></a>
+                            <a href="#" class="contact_social"><i :class="contact.icon"></i></a>
                         </div>
                     </div>
                 </div>
@@ -51,22 +51,17 @@
 </template>
 
 <script>
+
+import constants from "../../src/assets/json/constants.json";
 export default {
 
     data(){
         return{
-            contacts:[]
+            contacts: constants.contacts
         }
     },
- mounted() {
-     
-        fetch('http://localhost:3000/contacts')
-            .then(res => res.json())
-            .then(data => this.contacts = data)
-            .catch(err => console.log(err))
-            
     }
-}
+
 </script>
 
 <style scoped> 

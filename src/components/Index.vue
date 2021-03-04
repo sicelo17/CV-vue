@@ -9,7 +9,7 @@
                 </div>
 
                 <div class="home_social" id="home-social" :key="item" v-for="item in index">
-                      <a href="#" class="home_social-icon"><i class="{{item.icon}}"></i></a>
+                      <a href="#" class="home_social-icon"><i :class="item.icon"></i></a>
                 </div>
 
                 <div class="home_img">
@@ -21,19 +21,17 @@
 </template>
 
 <script>
+import constants from "../../src/assets/json/constants.json";
+
 export default {
     name: "Index",
     data(){
         return {
-            index: [],
+            index: constants.index
         }
     },
-    mounted() {
-        fetch('http://localhost:3000/index')
-            .then(res => res.json())
-            .then(data => this.index = data)
-            .catch(err => console.log(err))
-            
+    created(){
+        console.log(this.index)
     }
 }
 </script>
@@ -142,4 +140,5 @@ export default {
     }
 
 }
+
 </style>

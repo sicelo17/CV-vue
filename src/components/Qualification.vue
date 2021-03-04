@@ -7,7 +7,7 @@
             <div class="qualification_container bd-grid" id="qualification-area" >
               <div class="qualification_content" :key="qualification" v-for="qualification in qualifications">
                     <h2 class="qualification-title">
-                        <i class="{{qualification.icon2}}"></i>
+                        <i :class="qualification.icon2"></i>
                         {{qualification.title}}
                     </h2>
                     <div class="bd-grid">
@@ -15,11 +15,11 @@
                             <h3 class="qualification_area">{{qualification.area}}</h3>
                             <div class="qualification_box">
                                 <span class="qualification_work">
-                                    <i class="{{qualification.icon}}"></i>
+                                    <i :class="qualification.icon"></i>
                                     {{qualification.place}}
                                 </span>
                                 <span class="qualification_work">
-                                    <i class="{{qualification.work}}"></i>
+                                    <i :class="qualification.work"></i>
                                     {{qualification.duration}}
                                 </span>
                             </div>
@@ -33,18 +33,21 @@
 </template>
 
 <script>
+
+import constants from "../../src/assets/json/constants.json";
 export default {
     name: "Qualification",
     data(){
         return{
-            qualifications: []
+            qualifications: constants.qualification
         }
     },
-    mounted(){
-         fetch('http://localhost:3000/qualification')
-            .then(res => res.json())
-            .then(data => this.qualifications = data)
-            .catch(err => console.log(err))
+    created(){
+        console.log(this.qualifications)
+         //fetch('http://localhost:3000/qualification')
+            //.then(res => res.json())
+            //.then(data => this.qualifications = data)
+            //.catch(err => console.log(err))
             
     }
 }

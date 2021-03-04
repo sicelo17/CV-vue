@@ -11,7 +11,7 @@
 
             <div class="portfolio_container bd-grid"  id="portfolio-content" >
                  <div class="portfolio_content mix {{port.class}}" :key="port" v-for="port in portfolio">
-                    <a href="#"><img src="{{port.img}}" alt="" class="portfolio_img"></a>
+                    <a href="#"><img :src="port.img" alt="" class="portfolio_img"></a>
                       <div class="portfolio_data">
                           <span class="portfolio_subtitle">{{port.name}}</span>
                           <a href="#"><h2 class="portfolio_title">{{port.title}}</h2></a>
@@ -23,21 +23,26 @@
 </template>
 
 <script>
+import constants from "../../src/assets/json/constants.json";
+
 export default {
 
     data(){
         return{
-            portfolio:[]
+            portfolio: constants.portfolio
         }
     },
- mounted() {
-     
-        fetch('http://localhost:3000/portfolio')
-            .then(res => res.json())
-            .then(data => this.portfolio = data)
-            .catch(err => console.log(err))
-            
+    created(){
+        console.log(this.portfolio)
     }
+ //mounted() {
+     
+       // fetch('http://localhost:3000/portfolio')
+        //    .then(res => res.json())
+       //     .then(data => this.portfolio = data)
+        //    .catch(err => console.log(err))
+            
+    //}
 }
 </script>
 

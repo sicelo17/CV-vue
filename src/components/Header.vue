@@ -13,7 +13,7 @@
                 </ul>
             </div>
 
-            <div class="nav_toggle" id="nav-toggle">
+            <div class="nav_toggle" id="nav-toggle" @click="showMenu('nav-toggle', 'nav-menu')">
                 <i class='bx bx-menu'></i>
             </div>
         </nav>
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+
 export default {
     methods: {
         // show the mobile menu
