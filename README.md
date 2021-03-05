@@ -8,8 +8,6 @@
 
 
 ## Challenges
-- I am having difficulties in displaying icons from my json file
-- images are not appearing from the json file
 - I am not sure how to call the methods in my vue project
 
 ## Progress
@@ -19,4 +17,4 @@
 
 ## Currently Working on
 - finding a way to call the methods defined 
-- making the images and icons display from the json file
+

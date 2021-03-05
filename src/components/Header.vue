@@ -1,6 +1,6 @@
 <template>
-  <header class="l-header" id="header">
-        <nav class="nav bd-container">
+  <header class="l-header" id="header" @scroll="scrollHeader">
+        <nav class="nav bd-container" id="navbar">
             <a href="#" class="nav_logo">Sicelo Sitsha</a>
 
             <div class="nav_menu" id="nav-menu">
@@ -13,8 +13,10 @@
                 </ul>
             </div>
 
-            <div class="nav_toggle" id="nav-toggle" @click="showMenu('nav-toggle', 'nav-menu')">
-                <i class='bx bx-menu'></i>
+            <div class="nav_toggle" id="nav-toggle">
+                <button class="nav_button" id="nav-button"  @click="showMenu('nav-button', 'nav-menu')">
+                    <i class='bx bx-menu'></i>
+                </button>
             </div>
         </nav>
     </header>
@@ -24,17 +26,16 @@
 
 export default {
     methods: {
-        // show the mobile menu
-        showMenu (toggleId, navId){
-            const toggle = document.getElementById(toggleId),
-            nav = document.getElementById(navId);
-        
-            if (toggle && nav) {
-                toggle.addEventListener('click', () => {
-                nav.classList.toggle('show-menu')
-            });
-            }
-        },
+        showMenu(toggleId, navId){
+    const toggle = document.getElementById(toggleId),
+        nav = document.getElementById(navId);
+    
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('show-menu')
+        });
+    }
+},
         // ==== REMOVE MENU MOBILE ==== 
         linkAction (){
             const navLink = document.querySelectorAll('.nav_link');
@@ -45,11 +46,10 @@ export default {
         scrollHeader(){
             const header = document.getElementById('header');
             if (this.scrollY >= 600) header.classList.add('scroll-header'); else header.classList.remove('scroll-header');
-        },
-        scrollTop(){
-            const scrollTop = document.getElementById('scroll-top');
-            if (this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll');
         }
+    },
+    mounted(){
+        
     }
 }
 </script>
@@ -88,6 +88,26 @@ export default {
 /* SHOW MENU */
 .show-menu {
     top: var(--header-height);
+}
+
+.scroll-header {
+    background-color: var(--first-color-lighten);
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.scroll-header .nav_logo, .scroll-header .nav_toggle, .scroll-header .nav_link {
+    color: var(--first-color-dark);
+}
+
+.scroll-header .nav_menu {
+    background-color: var(--first-color-lighten);
+}
+.nav_button{
+    background: inherit;
+    color: inherit;
+    padding: 0;
+    border: none;
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 768px){
