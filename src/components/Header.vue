@@ -1,5 +1,5 @@
 <template>
-    <header class="l-header" id="header" @scroll="scrollHeader">
+    <header class="l-header" id="header">
         <nav class="nav bd-container" id="navbar">
             <a href="#" class="nav_logo">Sicelo Sitsha</a>
 
@@ -38,12 +38,16 @@ export default {
             }
         },
         scrollHeader(){
-            const header = document.getElementById('header');
+            let header = document.getElementById('header');
             if (this.scrollY >= 600) header.classList.add('scroll-header'); else header.classList.remove('scroll-header');
+            console.log("scrolled")
         }
         },
         mounted(){
             window.addEventListener("scroll", this.scrollHeader)
+        },
+        unmounted(){
+            window.removeEventListener("scroll", this.scrollHeader)
         }
 }
 
