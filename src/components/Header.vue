@@ -123,5 +123,9 @@ export default {
         box-shadow: 0 2px 4px rgba(0,0,0,.1);
         border-radius: 0 0 1rem 1rem;
     }
+    .nav_list {
+        display: flex;
+        flex-direction: column;
+    }
 }
 </style>
