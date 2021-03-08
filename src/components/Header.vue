@@ -27,17 +27,25 @@
 export default {
     methods: {
         toggleMenu() {
-            var menuBox = document.getElementById('nav-menu');    
-            if(menuBox.style.top == "3rem") { // if is menuBox displayed, hide it
+            let menuBox = document.getElementById('nav-menu'); 
+            // if is menuBox displayed, hide it   
+            if(menuBox.style.top == "3rem") { 
                 menuBox.style.top = "-100%";
             }
-            else { // if is menuBox hidden, display it
+            // if is menuBox hidden, display it
+            else { 
                 menuBox.style.top = "3rem";
             }
+        },
+        scrollHeader(){
+            const header = document.getElementById('header');
+            if (this.scrollY >= 600) header.classList.add('scroll-header'); else header.classList.remove('scroll-header');
+        }
+        },
+        mounted(){
+            window.addEventListener("scroll", this.scrollHeader)
         }
 }
-    }
-
 
 </script>
 
