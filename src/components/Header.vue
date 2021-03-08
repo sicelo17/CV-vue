@@ -1,5 +1,5 @@
 <template>
-  <header class="l-header" id="header" @scroll="scrollHeader">
+    <header class="l-header" id="header" @scroll="scrollHeader">
         <nav class="nav bd-container" id="navbar">
             <a href="#" class="nav_logo">Sicelo Sitsha</a>
 
@@ -14,7 +14,7 @@
             </div>
 
             <div class="nav_toggle" id="nav-toggle">
-                <button class="nav_button" id="nav-button"  @click="showMenu('nav-button', 'nav-menu')">
+                <button class="nav_button" id="nav-button" @click="toggleMenu">
                     <i class='bx bx-menu'></i>
                 </button>
             </div>
@@ -26,32 +26,19 @@
 
 export default {
     methods: {
-        showMenu(toggleId, navId){
-    const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId);
-    
-    if (toggle && nav) {
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('show-menu')
-        });
-    }
-},
-        // ==== REMOVE MENU MOBILE ==== 
-        linkAction (){
-            const navLink = document.querySelectorAll('.nav_link');
-            const navMenu = document.getElementById('nav-menu');
-            navMenu.classList.remove('show-menu');
-        },
-        // Changing the color of the navbar on scroll
-        scrollHeader(){
-            const header = document.getElementById('header');
-            if (this.scrollY >= 600) header.classList.add('scroll-header'); else header.classList.remove('scroll-header');
+        toggleMenu() {
+            var menuBox = document.getElementById('nav-menu');    
+            if(menuBox.style.top == "3rem") { // if is menuBox displayed, hide it
+                menuBox.style.top = "-100%";
+            }
+            else { // if is menuBox hidden, display it
+                menuBox.style.top = "3rem";
+            }
         }
-    },
-    mounted(){
-        
-    }
 }
+    }
+
+
 </script>
 
 <style scoped>
@@ -85,6 +72,7 @@ export default {
     font-size: 1.3rem;
     cursor: pointer;
 }
+
 /* SHOW MENU */
 .show-menu {
     top: var(--header-height);
