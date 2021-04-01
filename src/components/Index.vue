@@ -5,7 +5,7 @@
                     <span class="home_greeting">Hi, My name is</span>
                     <h1 class="home_name">Sicelo Sitsha</h1>
                     <span class="home_profession">Web Developer</span>
-                    <a download="" href="assets/pdf/Sicelo Sitsha resume.pdf" class="button button-light">Download CV</a>
+                    <a download="" href="#" class="button button-light">Download CV</a>
                 </div>
 
                 <div class="home_social" id="home-social" :key="item" v-for="item in index">

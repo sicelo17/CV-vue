@@ -129,7 +129,8 @@ export default {
     cursor: pointer;
     border: none;
 }
-.contact_social {
+#contact-info {
     display: inline-flex;
+    margin: 0.875rem;
 }
 </style>
