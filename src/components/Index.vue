@@ -84,7 +84,7 @@ export default {
 }
 
 .home_img img {
-    width: 200px;
+    width: 350px;
 }
 
 .home_social {
@@ -138,6 +138,12 @@ export default {
         padding-top: 4rem;
     }
 
+}
+
+@media screen and (max-width: 445px){
+    .home_img{
+        width: 200px;
+    }
 }
 
 </style>
